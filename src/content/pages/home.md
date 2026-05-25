@@ -9,9 +9,9 @@ We provide luxe tea experiences for sophisticated palates. Taste the difference,
 
 ## Our Mission:
 
-Welcome, tea lover! This year, Tease is offering 100 lucky club members an opportunity to savor the very best teas in the world in an intimate setting. 
+Welcome, tea lovers! We're excited to offer 100 lucky club members the opportunity to savor the best teas the world has to offer. Straight from the source to your cup, we guarantee excellence with every pour.
 
-We’ll tease your tongue and expand your horizons with high mountain oolong and oceanic gyokuro to earthy pu’er.
+**Tease your tongue and expand your horizons, from high mountain oolong and oceanic gyokuro to earthy pu’er.**
 
 \- James and Nadine
 
