@@ -3,7 +3,7 @@ title: Home
 ---
 ## Welcome to Tease
 
-Luxe tea experiences for sophisticated palates. 
+We provide luxe tea experiences for sophisticated palates. Taste the difference, savor the experience.
 
 ## Our Mission:
 
