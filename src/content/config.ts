@@ -11,7 +11,6 @@ const blog = defineCollection({
 const pages = defineCollection({
   schema: z.object({
     title: z.string(),
-    body: z.string().optional(),
   }),
 });
 
