@@ -7,8 +7,8 @@
 @import './tokens.css';
 
 :root {
-	--accent: --color-inkwell;
-	--accent-dark: --color-crimson;
+	--accent: #3D5A3E;      /* Sencha — primary accent */
+	--accent-dark: #2C3B2D; /* Deep Matcha — darker variant */
 	--black: 15, 18, 25;
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
@@ -49,10 +49,13 @@ h6 {
 }
 h1 {
 	font-size: 3.052em;
+	color: var(--color-crimson);
 }
 h2 {
 	font-size: 2.441em;
+	color: var(--color-crimson);
 }
+
 h3 {
 	font-size: 1.953em;
 }
