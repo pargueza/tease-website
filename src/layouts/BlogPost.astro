@@ -11,6 +11,10 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
+---
+import Navbar from '../components/Navbar.astro';
+---
+
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
