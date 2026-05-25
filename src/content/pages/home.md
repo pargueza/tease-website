@@ -11,6 +11,8 @@ Welcome, tea lover! This year, Tease is offering 100 lucky club members an oppor
 
 We’ll tease your tongue and expand your horizons with high mountain oolong and oceanic gyokuro to earthy pu’er.
 
+\- James and Nadine
+
 ### What We Offer:
 
 Curated tastings for select groups, how-to-guides, and seasonal selections.
