@@ -13,4 +13,4 @@ title: Home
 
 \- James and Nadine
 
-<button class="btn">Join The Club</button>
+<a href="/join" class="btn">Join The Club</a>
