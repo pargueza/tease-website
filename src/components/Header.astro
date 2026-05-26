@@ -109,7 +109,7 @@ import HeaderLink from './HeaderLink.astro';
     display: block;
     width: 26px;
     height: 2px;
-    background: currentColor;
+    background: var(--color-parchment);
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform-origin: center;
@@ -151,10 +151,14 @@ import HeaderLink from './HeaderLink.astro';
       z-index: 99;
     }
 
-    /* Make menu itemsm inkwell on mobile */
+    /* Make menu items inkwell on mobile */
     @media (max-width: 720px) {
       nav a {
         color: var(--color-inkwell);
+      }
+      nav a.active {
+        border-bottom-color: var(--accent-teal);
+        color: var(--accent-teal);
       }
     }
 
