@@ -150,3 +150,74 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: var(--color-parchment);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--accent-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--color-parchment);
+}
+
+/* Typography utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Spacing */
+.section {
+  padding: 4rem 2rem;
+}
+
+.section-sm {
+  padding: 2rem 1rem;
+}
+
+/* Full width image */
+.full-width {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+/* Cards */
+.card {
+  background: var(--color-washi);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-aged-silver);
+  margin: 2rem 0;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
