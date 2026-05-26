@@ -12,5 +12,3 @@ title: Home
 **100% quality guaranteed. If it didn't move us, it won't make it to your cup.**
 
 \- James and Nadine
-
-<a href="/join" class="btn">Join The Club</a>
