@@ -1,6 +1,8 @@
 ---
 title: Home
 ---
+# Welcome Home
+
 ## Our Mission:
 
 Welcome, tea lover! This year, Tease is offering 100 lucky club members an opportunity to savor the very best teas in the world in an intimate setting. 
