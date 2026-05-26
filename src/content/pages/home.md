@@ -1,16 +1,14 @@
 ---
 title: Home
 ---
-# Welcome Home
+# Welcome
 
-## Our Mission:
+## Teas That Move You
 
-Welcome, tea lover! This year, Tease is offering 100 lucky club members an opportunity to savor the very best teas in the world in an intimate setting. 
+**Our mission is simple:** connecting 100 tea lovers with exclusive opportunities to sip and savor premium flavors in an intimate setting.
 
-We’ll tease your tongue and expand your horizons, from high mountain oolong and oceanic gyokuro to earthy pu’er.
+**Our seasonal selections will scintillate your senses.** Tease your tongue and expand your horizons, from high mountain oolong and oceanic gyokuro to earthy pu’er.
+
+**100% quality guaranteed. If it didn't move us, it won't make it to your cup.**
 
 \- James and Nadine
-
-## What We Offer:
-
-Curated tastings for select groups, how-to-guides, and seasonal selections.
