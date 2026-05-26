@@ -21,15 +21,33 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - label: "Home Page"
+      - label: "Home"
         name: "home"
         file: "src/content/pages/home.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-      - label: "About Page"
+      - label: "About"
         name: "about"
         file: "src/content/pages/about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Shop"
+        name: "shop"
+        file: "src/content/pages/shop.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Join"
+        name: "join"
+        file: "src/content/pages/join.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Contact"
+        name: "contact"
+        file: "src/content/pages/contact.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
