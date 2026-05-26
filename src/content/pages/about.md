@@ -1,10 +1,14 @@
 ---
 title: About
 ---
-## About Marina Bay Media:
+# Our Promise:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Every tea in our collection made us stop mid-sip and take notes. If it doesn’t make us obsessed, it doesn’t go to your table.
 
-## What We Do:
+We cultivate relationships with generational growers who obsess over their craft the way we obsess over ours, and bring back only what genuinely moved us.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+If it didn't seduce us first, it won't reach your door.
+
+## How it Works:
+
+Every month, we will issue a newsletter featuring access to events and this seasons’ tea selection.
