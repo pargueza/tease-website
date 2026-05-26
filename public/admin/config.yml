@@ -23,31 +23,31 @@ collections:
     files:
       - label: "Home"
         name: "home"
-        file: "src/content/pages/home.md"
+        file: "src/content/pages/home.mdx"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "About"
         name: "about"
-        file: "src/content/pages/about.md"
+        file: "src/content/pages/about.mdx"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Shop"
         name: "shop"
-        file: "src/content/pages/shop.md"
+        file: "src/content/pages/shop.mdx"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Join"
         name: "join"
-        file: "src/content/pages/join.md"
+        file: "src/content/pages/join.mdx"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Contact"
         name: "contact"
-        file: "src/content/pages/contact.md"
+        file: "src/content/pages/contact.mdx"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
