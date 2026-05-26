@@ -72,6 +72,7 @@ import HeaderLink from './HeaderLink.astro';
     text-decoration: none;
   }
   nav a.active {
+    color: var(--color-parchment);
     text-decoration: none;
     border-bottom-color: var(--accent);
   }
@@ -148,6 +149,13 @@ import HeaderLink from './HeaderLink.astro';
       transform: translateX(100%);
       transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
       z-index: 99;
+    }
+
+    /* Make menu itemsm inkwell on mobile */
+    @media (max-width: 720px) {
+      nav a {
+        color: var(--color-inkwell);
+      }
     }
 
     .menu.open {
