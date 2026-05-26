@@ -27,12 +27,29 @@
     justify-content: space-between;
     padding: 1rem 2rem;
     position: relative;
+    background: var(--color-inkwell);
+  }
+
+  .logo {
+    color: #ffffff;
+    text-decoration: none;
   }
 
   .nav-links {
     display: flex;
     gap: 2rem;
     list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    color: var(--accent-teal-light);
   }
 
   /* --- Hamburger button --- */
@@ -51,7 +68,7 @@
     display: block;
     width: 26px;
     height: 2px;
-    background: currentColor;
+    background: #ffffff;
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform-origin: center;
@@ -85,7 +102,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: #fff;
+      background: var(--color-inkwell);
       box-shadow: -4px 0 20px rgba(0,0,0,0.1);
       transform: translateX(100%);
       transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -116,3 +133,4 @@
     });
   });
 </script>
+```
