@@ -1,7 +1,0 @@
-User-agent: ChatGPT-User
-Disallow: /
-User-agent: GPTBot
-Disallow: /
-User-agent: *
-Disallow:
-Sitemap: file:////Users/pargueza/Documents/Publii/sites/marina-bay-media/preview/sitemap.xml
