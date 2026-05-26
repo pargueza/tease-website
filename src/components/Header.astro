@@ -94,9 +94,14 @@ import HeaderLink from './HeaderLink.astro';
   .social-links,
   .social-links a {
     display: flex;
-    color: var(--color-inkwell);
+    color: var(--color-parchment);
   }
 
+  @media (max-width: 720px) {
+    .social-links a {
+      color: var(--color-inkwell);
+    }
+  }
   /* Hamburger hidden on desktop */
   .hamburger {
     display: none;
