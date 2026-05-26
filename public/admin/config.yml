@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: pargueza/tease-website
+  repo: pargueza/marina-bay-media
   branch: main
 
 media_folder: public/images
