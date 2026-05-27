@@ -72,11 +72,11 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main>
-			<section>
+			<section class="fade-up">
 				<ul>
 					{
 						posts.map((post) => (
-							<li>
+							<li class="card">
 								<a href={`/blog/${post.id}/`}>
 									{post.data.heroImage && (
 										<Image width={720} height={360} src={post.data.heroImage} alt="" />
