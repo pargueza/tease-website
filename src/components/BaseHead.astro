@@ -57,4 +57,4 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
 
 <!-- Animations -->
-<script src="/scripts/animations.js"></script>
+<script src="/scripts/animations.js" is:inline></script>
