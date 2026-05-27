@@ -62,9 +62,6 @@ body {
   color: var(--color-inkwell);              /* default text color */
 }
 
-Yes! Just paste this part to the bottom of your existing `tokens.css`:
-
-```css
 /* ============================================
    IMAGE UTILITIES
    ============================================ */
