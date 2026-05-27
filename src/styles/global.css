@@ -33,7 +33,7 @@ body {
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
+	color: var(--color-inkwell);
 	font-size: 20px;
 	line-height: 1.7;
 }
@@ -55,6 +55,7 @@ h6 {
 }
 h1 {
 	font-size: 3.052em;
+	color: var(--color-crimson);
 }
 
 h2 {
@@ -206,6 +207,7 @@ hr {
   background: var(--color-washi);
   padding: 2rem;
   border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Divider */
@@ -237,6 +239,13 @@ hr {
   transform: translateY(0);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* ============================================
    GOLD UNDERLINE SWEEP
    ============================================ */
@@ -264,10 +273,6 @@ a:hover::after {
 /* ============================================
    LIFT ON HOVER — CARDS
    ============================================ */
-
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 .card:hover {
   transform: translateY(-6px);
