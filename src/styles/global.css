@@ -221,3 +221,55 @@ hr {
   margin: 0 auto;
   padding: 0 2rem;
 }
+
+/* ============================================
+   FADE-UP ON SCROLL
+   ============================================ */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   GOLD UNDERLINE SWEEP
+   ============================================ */
+
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-raw-gold);
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   LIFT ON HOVER — CARDS
+   ============================================ */
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
