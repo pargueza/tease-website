@@ -3,7 +3,6 @@
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
-import { ViewTransitions } from 'astro:transitions';
 
 // https://astro.build/config
 export default defineConfig({
