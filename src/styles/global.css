@@ -60,13 +60,10 @@ h4 { font-size: 1.563em; }
 h5 { font-size: 1.25em; }
 
 strong, b { font-weight: 700; }
-
 a { color: var(--accent); }
 a:hover { color: var(--accent); }
-
 p { margin-bottom: 1em; }
 .prose p { margin-bottom: 2em; }
-
 textarea { width: 100%; font-size: 16px; }
 input { font-size: 16px; }
 table { width: 100%; }
@@ -138,7 +135,6 @@ hr {
   z-index: 0;
 }
 
-/* Fill sweep — background sweeps in from left */
 .btn::before {
   content: '';
   position: absolute;
@@ -151,9 +147,7 @@ hr {
   z-index: -1;
 }
 
-.btn:hover::before {
-  left: 0;
-}
+.btn:hover::before { left: 0; }
 
 .btn-outline {
   background: transparent;
@@ -161,11 +155,8 @@ hr {
   color: var(--accent);
 }
 
-.btn-outline:hover {
-  color: var(--color-parchment);
-}
+.btn-outline:hover { color: var(--color-parchment); }
 
-/* Shimmer on CTA buttons */
 .btn-shimmer {
   background: var(--accent);
   color: var(--color-parchment);
@@ -190,10 +181,7 @@ hr {
   100% { left: 125%; }
 }
 
-/* Pulse ring on Join button */
-.btn-pulse {
-  position: relative;
-}
+.btn-pulse { position: relative; }
 
 .btn-pulse::after {
   content: '';
@@ -283,125 +271,6 @@ hr {
 
 .img-zoom:hover img {
   transform: scale(1.05);
-}
-
-/* ============================================
-   NAV ITALIC HOVER
-   ============================================ */
-
-nav a {
-  transition: font-style 0.2s ease, color 0.2s ease;
-}
-
-nav a:hover {
-  font-style: italic;
-  font-family: var(--font-display);
-}
-
-/* ============================================
-   FADE-UP ON SCROLL
-   ============================================ */
-
-.fade-up {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fade-up {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-}
-
-/* ============================================
-   GOLD UNDERLINE SWEEP
-   ============================================ */
-
-a {
-  position: relative;
-  text-decoration: none;
-}
-
-a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--color-raw-gold);
-  transition: width 0.3s ease;
-}
-
-a:hover::after {
-  width: 100%;
-}
-
-/* ============================================
-   LIFT ON HOVER — CARDS
-   ============================================ */
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-}
-
-/* ============================================
-   KEN BURNS — HERO IMAGES
-   ============================================ */
-
-.hero-ken-burns {
-  overflow: hidden;
-  position: relative;
-}
-
-.hero-ken-burns img {
-  animation: ken-burns 12s ease-in-out infinite alternate;
-  transform-origin: center;
-}
-
-@keyframes ken-burns {
-  0% { transform: scale(1) translate(0, 0); }
-  100% { transform: scale(1.08) translate(-2%, -1%); }
-}
-
-/* ============================================
-   PARALLAX HERO
-   ============================================ */
-
-.parallax {
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
-
-/* ============================================
-   TEXT REVEAL
-   ============================================ */
-
-.text-reveal {
-  overflow: hidden;
-}
-
-.text-reveal span {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(100%);
-  animation: reveal 0.6s forwards;
-}
-
-@keyframes reveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* To use the new effects add these classes:
