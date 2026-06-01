@@ -8,9 +8,6 @@ import { defineConfig, fontProviders } from 'astro/config';
 export default defineConfig({
   site: 'https://try-tease.com',
   integrations: [mdx(), sitemap()],
-  experimental: {
-    viewTransitions: true
-  },
   fonts: [
     {
       provider: fontProviders.local(),
