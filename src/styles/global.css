@@ -403,3 +403,12 @@ a:hover::after {
     transform: translateY(0);
   }
 }
+
+/* To use the new effects add these classes:
+Ken Burns hero: class="hero-ken-burns" on image wrapper
+Image zoom: class="img-zoom" on image wrapper
+Shimmer CTA: class="btn btn-shimmer" on buttons
+Pulse Join button: class="btn btn-pulse" on Join button
+Text reveal: class="text-reveal" on headline wrapper
+Parallax: class="parallax" on hero section with inline background image
+*/
