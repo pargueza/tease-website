@@ -58,6 +58,7 @@ if (document.readyState === 'loading') {
 document.addEventListener('astro:page-load', initAnimations);
 function initCursorTrail() {
   if (window.matchMedia('(pointer: coarse)').matches) return;
+  if (!document.body) return;
   const trail = document.createElement('div');
   trail.style.cssText = `
     position: fixed;
@@ -83,5 +84,6 @@ function initCursorTrail() {
     }, 800);
   });
 }
-initCursorTrail();
+
+document.addEventListener('DOMContentLoaded', initCursorTrail);
 </script>
