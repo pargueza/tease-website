@@ -187,21 +187,27 @@ import HeaderLink from './HeaderLink.astro';
   }
 </style>
 
-<script>
+<script is:inline>
+function initHamburger() {
   const hamburger = document.getElementById("hamburger");
   const menu = document.getElementById("menu");
 
-  hamburger?.addEventListener("click", () => {
+  if (!hamburger || !menu) return;
+
+  hamburger.addEventListener("click", () => {
     const isOpen = hamburger.getAttribute("aria-expanded") === "true";
     hamburger.setAttribute("aria-expanded", String(!isOpen));
-    menu?.classList.toggle("open");
+    menu.classList.toggle("open");
   });
 
-  // Close when a link is clicked
-  menu?.querySelectorAll("a").forEach(link => {
+  menu.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
-      hamburger?.setAttribute("aria-expanded", "false");
+      hamburger.setAttribute("aria-expanded", "false");
       menu.classList.remove("open");
     });
   });
+}
+
+document.addEventListener('DOMContentLoaded', initHamburger);
+document.addEventListener('astro:page-load', initHamburger);
 </script>
