@@ -2,17 +2,21 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { getEntry, render } from 'astro:content';
+
+const shop = await getEntry('pages', 'shop');
+const { Content } = shop ? await render(shop) : { Content: null };
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title="Shop" description="Shop Tease" />
+    <BaseHead title="Shop" description="Shop Tease Products" />
   </head>
   <body>
     <Header />
     <main class="fade-up">
-      <h1>Shop Tease Products</h1>
-      <p>Coming soon.</p>
+      {Content && <Content />}
     </main>
     <Footer />
   </body>
