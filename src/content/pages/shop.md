@@ -3,12 +3,12 @@ title: Shop Tease Products
 ---
 Storefront coming soon!
 
-![](/images/womens-v-neck-shirt.png)
+![womens shirt](/images/womens-v-neck-shirt.png)
 
-![](/images/mens-crewneck-shirt.png)
+![mens shirt](/images/mens-crewneck-shirt.png)
 
-![](/images/mens-hoodie.png)
+![mens hoodie](/images/mens-hoodie.png)
 
-![](/images/mug.png)
+![mug](/images/mug.png)
 
-![](/images/apron.png)
+![apron](/images/apron.png)
