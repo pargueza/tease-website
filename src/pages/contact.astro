@@ -17,6 +17,15 @@ const { Content } = about ? await render(about) : { Content: null };
   <body>
     <Header />
     <main class="fade-up" style="padding-top: 0; padding-bottom: 0;">
+      <!-- Row: Full Width Banner -->
+      <div style="height: 7em; overflow: hidden; width: 100vw; margin-left: calc(-50vw + 50%);">
+        <img
+          src="/images/20260608 tease blog banners teacups.png"
+          alt=""
+          style="width: 100%; height: 100%; object-fit: cover; display: block;"
+        />
+      </div>
+
       {Content && <Content />}
       <script src="https://anvil.works/embed.js" async></script>
       <iframe style="width:100%;" data-anvil-embed src="https://luminous-trim-sweet.anvil.app"></iframe>
