@@ -14,12 +14,23 @@ import { Image } from 'astro:assets';
     <Header />
     <main class="fade-up">
 
-      <!-- Row 1: Hero Image -->
+      <!-- Row: Full Width YouTube Video Row -->
+      <div class="w-full" style="height: 400px;">
+        <iframe
+          src="https://www.youtube.com/embed/S4sLWVc4MfU"
+          title="20260608 tease blog banners tea pouring dark"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="w-full h-full"
+        ></iframe>
+      </div>
+
+      <!-- Row: Hero Image -->
       <div class="w-full">
         <img src="images/20260524-good-morning.png" alt="About Tease" class="w-full h-auto" />
       </div>
 
-      <!-- Row 2: Text -->
+      <!-- Row: Text -->
       <div class="max-w-3xl mx-auto px-6 py-16 text-center">
         <h1>Our Promise:</h1>
         <p>Every tea in our collection made us stop mid-sip and take notes. If it doesn’t make us obsessed, it doesn’t go to your table.
@@ -28,7 +39,7 @@ import { Image } from 'astro:assets';
         </p>
       </div>
 
-      <!-- Row 3: Image Left / Text Right -->
+      <!-- Row: Image Left / Text Right -->
       <div class="flex flex-col md:flex-row items-center gap-8 px-6 py-12 max-w-6xl mx-auto">
         <div class="w-full md:w-1/2">
           <img src="/images/mens-hoodie.png" alt="Our Story" class="w-full h-auto rounded-lg" />
@@ -40,7 +51,7 @@ import { Image } from 'astro:assets';
         </div>
       </div>
 
-      <!-- Row 4: Text Left / Image Right -->
+      <!-- Row: Text Left / Image Right -->
       <div class="flex flex-col md:flex-row-reverse items-center gap-8 px-6 py-12 max-w-6xl mx-auto">
         <div class="w-full md:w-1/2">
           <img src="/images/womens-v-neck-shirt.png" alt="How It Works" class="w-full h-auto rounded-lg" />
