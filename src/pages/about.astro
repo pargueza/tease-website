@@ -14,12 +14,12 @@ import { Image } from 'astro:assets';
     <Header />
     <main class="fade-up" style="padding-top: 0; padding-bottom: 0;">
 
-    <!-- Row: Full Width Background Image -->
-    <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]" style="height: 5em;">
+    <!-- Row: Full Width Banner -->
+    <div style="height: 5em; overflow: hidden; width: 100vw; margin-left: calc(-50vw + 50%);">
       <img
         src="/images/20260608 tease blog banners tea kettle pour.png"
         alt=""
-        class="absolute top-0 left-0 w-full h-full object-cover"
+        style="width: 100%; height: 100%; object-fit: cover; display: block;"
       />
     </div>
 
