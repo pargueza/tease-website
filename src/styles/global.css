@@ -28,7 +28,7 @@ body {
   word-wrap: break-word;
   overflow-wrap: break-word;
   color: var(--color-inkwell);
-  font-size: 20px;
+  font-size: 17px;
   line-height: 1.7;
 }
 
@@ -55,7 +55,7 @@ h2 {
   color: var(--color-crimson);
 }
 
-h3 { font-size: 1.5em; }
+h3 { font-size: 1.25em; }
 h4 { font-size: 1em; }
 h5 { font-size: 1em; }
 
