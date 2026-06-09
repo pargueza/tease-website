@@ -2,7 +2,6 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { Image } from 'astro:assets';
 ---
 
 <!doctype html>
@@ -13,25 +12,24 @@ import { Image } from 'astro:assets';
   <body>
     <Header />
     <main class="fade-up" style="padding-top: 0; padding-bottom: 0;">
+      <!-- Row: Full Width Banner -->
+      <div style="height: 7em; overflow: hidden; width: 100vw; margin-left: calc(-50vw + 50%);">
+        <img
+          src="/images/20260608 tease blog banners tea kettle pour.png"
+          alt=""
+          class="img-tilt-right"
+          style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0;"
+        />
+      </div>
 
-    <!-- Row: Full Width Banner -->
-    <div style="height: 7em; overflow: hidden; width: 100vw; margin-left: calc(-50vw + 50%);">
-      <img
-        src="/images/20260608 tease blog banners tea kettle pour.png"
-        alt=""
-        class="img-tilt-right"
-        style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0;"
-      />
-    </div>
-
-    <!-- Row: Text -->
-    <div class="max-w-3xl mx-auto px-6 py-16 text-center" style="background: var(--color-inkwell); color: var(--color-parchment);">
-      <h1>Our Promise:</h1>
-        <p>Every tea in our collection made us stop mid-sip and take notes. If it doesn’t make us obsessed, it doesn’t go to your table.
-        We cultivate relationships with generational growers who obsess over their craft the way we obsess over ours, and bring back only what genuinely moved us.
-        If it didn’t seduce us first, it won’t reach your door.
+      <!-- Row: Text -->
+      <div class="px-6 py-16 text-center" style="background: var(--color-inkwell); color: var(--color-parchment); width: 100vw; margin-left: calc(-50vw + 50%);">
+        <h1 style="color: var(--color-raw-gold);">Our Promise:</h1>
+        <p style="color: var(--color-parchment); max-width: 720px; margin: 0 auto;">Every tea in our collection made us stop mid-sip and take notes. If it doesn't make us obsessed, it doesn't go to your table.
+          We cultivate relationships with generational growers who obsess over their craft the way we obsess over ours, and bring back only what genuinely moved us.
+          If it didn't seduce us first, it won't reach your door.
         </p>
-    </div>
+      </div>
 
       <!-- Row: Image Left / Text Right -->
       <div class="flex flex-col md:flex-row items-center gap-8 px-6 py-12 max-w-6xl mx-auto">
