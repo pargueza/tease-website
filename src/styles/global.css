@@ -261,26 +261,25 @@ hr {
 }
 
 /* ============================================
-   IMAGE ZOOM ON HOVER
+   IMAGE EFFECTS
    ============================================ */
 
-.img-zoom {
+.img-zoom { /* Image zoom on hover */
   overflow: hidden;
 }
 
-.img-zoom img {
+.img-zoom img { /* Image zoom on hover */
   transition: transform 0.4s ease;
 }
 
-.img-zoom:hover img {
+.img-zoom:hover img { /* Image zoom on hover */
   transform: scale(1.05);
 }
 
-/* To use the new effects add these classes:
-Ken Burns hero: class="hero-ken-burns" on image wrapper
-Image zoom: class="img-zoom" on image wrapper
-Shimmer CTA: class="btn btn-shimmer" on buttons
-Pulse Join button: class="btn btn-pulse" on Join button
-Text reveal: class="text-reveal" on headline wrapper
-Parallax: class="parallax" on hero section with inline background image
-*/
+.img-tilt-right { /* Tilted image */
+  clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
+}
+
+.img-tilt-left { /* Tilted image */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 72%);
+}
