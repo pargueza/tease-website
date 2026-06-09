@@ -9,9 +9,10 @@ import Footer from '../components/Footer.astro';
   <head>
     <BaseHead title="Shop" description="Shop Tease Products" />
   </head>
-  <body>
+  <body style="background: var(--color-inkwell); color: var(--color-parchment);">
     <Header />
-    <main class="fade-up" style="padding-top: 0; padding-bottom: 0;">
+    <main class="fade-up" style="padding-top: 0; padding-bottom: 0; background: var(--color-inkwell);">
+
       <!-- Row: Full Width Banner -->
       <div style="height: 7em; overflow: hidden; width: 100vw; margin-left: calc(-50vw + 50%);">
         <img
@@ -21,11 +22,11 @@ import Footer from '../components/Footer.astro';
           style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0;"
         />
       </div>
-  
+
       <!-- Row: Heading -->
-      <div class="text-center py-12">
-        <h1>Shop Tease Products</h1>
-        <p>Storefront coming soon!</p>
+      <div class="text-center py-12" style="color: var(--color-parchment);">
+        <h1 style="color: var(--color-raw-gold);">Shop Tease Products</h1>
+        <p style="color: var(--color-parchment);">Storefront coming soon!</p>
       </div>
 
       <!-- Product Grid -->
