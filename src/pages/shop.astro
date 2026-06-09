@@ -2,10 +2,6 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { getEntry, render } from 'astro:content';
-
-const shop = await getEntry('pages', 'shop');
-const { Content } = shop ? await render(shop) : { Content: null };
 ---
 
 <!doctype html>
@@ -15,8 +11,64 @@ const { Content } = shop ? await render(shop) : { Content: null };
   </head>
   <body>
     <Header />
-    <main class="fade-up">
-      {Content && <Content />}
+    <main class="fade-up" style="padding-top: 0; padding-bottom: 0;">
+
+      <!-- Row: Full Width Banner -->
+      <div style="height: 7em; overflow: hidden; width: 100vw; margin-left: calc(-50vw + 50%);">
+        <img
+          src="/images/20260608-tease-blog-banners-green-tea.png"
+          alt=""
+          class="img-tilt-right"
+          style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0;"
+        />
+      </div>
+
+      <!-- Row: Heading -->
+      <div class="text-center py-12">
+        <h1>Shop Tease Products</h1>
+        <p>Storefront coming soon!</p>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 pb-16 max-w-6xl mx-auto">
+
+        <!-- Women's Shirt -->
+        <div class="card text-center">
+          <img src="/images/womens-v-neck-shirt.png" alt="Women's V-Neck Shirt" class="w-full h-auto rounded-lg mb-4" />
+          <h3>Women's V-Neck</h3>
+          <p>Classic Tease tee for her.</p>
+        </div>
+
+        <!-- Men's Shirt -->
+        <div class="card text-center">
+          <img src="/images/mens-crewneck-shirt.png" alt="Men's Crewneck Shirt" class="w-full h-auto rounded-lg mb-4" />
+          <h3>Men's Crewneck</h3>
+          <p>Classic Tease tee for him.</p>
+        </div>
+
+        <!-- Men's Hoodie -->
+        <div class="card text-center">
+          <img src="/images/mens-hoodie.png" alt="Men's Hoodie" class="w-full h-auto rounded-lg mb-4" />
+          <h3>Men's Hoodie</h3>
+          <p>Stay cozy in Tease style.</p>
+        </div>
+
+        <!-- Mug -->
+        <div class="card text-center">
+          <img src="/images/mug.png" alt="Tease Mug" class="w-full h-auto rounded-lg mb-4" />
+          <h3>Tease Mug</h3>
+          <p>Your morning ritual, elevated.</p>
+        </div>
+
+        <!-- Apron -->
+        <div class="card text-center">
+          <img src="/images/apron.png" alt="Tease Apron" class="w-full h-auto rounded-lg mb-4" />
+          <h3>Tease Apron</h3>
+          <p>Brew in style.</p>
+        </div>
+
+      </div>
+
     </main>
     <Footer />
   </body>
