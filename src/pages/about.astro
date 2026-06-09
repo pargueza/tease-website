@@ -12,6 +12,7 @@ import Footer from '../components/Footer.astro';
   <body>
     <Header />
     <main class="fade-up" style="padding-top: 0; padding-bottom: 0;">
+
       <!-- Row: Full Width Banner -->
       <div style="height: 7em; overflow: hidden; width: 100vw; margin-left: calc(-50vw + 50%);">
         <img
@@ -22,24 +23,27 @@ import Footer from '../components/Footer.astro';
         />
       </div>
 
-      <!-- Row: Text -->
-      <div class="px-6 py-16 text-center" style="background: var(--accent-dark); color: var(--color-parchment); width: 100vw; margin-left: calc(-50vw + 50%); margin-top: -3em;">
-        <h1 style="color: var(--color-raw-gold);">Our Promise:</h1>
-        <p style="color: var(--color-parchment); max-width: 720px; margin: 0 auto;">Every tea in our collection made us stop mid-sip and take notes. If it doesn't make us obsessed, it doesn't go to your table.
-          We cultivate relationships with generational growers who obsess over their craft the way we obsess over ours, and bring back only what genuinely moved us.
-          If it didn't seduce us first, it won't reach your door.
-        </p>
+      <!-- Wrapper: Dark section + leaf overlay -->
+      <div style="position: relative; width: 100vw; margin-left: calc(-50vw + 50%); margin-top: -3em;">
 
-        <!-- Logo -->
-        <div style="text-align: center;">
-          <a href="/">
-            <img src="/images/negative-logo-transparent-background.png" alt="Tease Logo" style="height: 7em; width: auto; display: inline-block;" />
-          </a>
+        <!-- Row: Text -->
+        <div class="px-6 py-16 text-center" style="background: var(--accent-dark); color: var(--color-parchment); position: relative; z-index: 0;">
+          <h1 style="color: var(--color-raw-gold);">Our Promise:</h1>
+          <p style="color: var(--color-parchment); max-width: 720px; margin: 0 auto;">
+            Every tea in our collection made us stop mid-sip and take notes. If it doesn't make us obsessed, it doesn't go to your table.
+            We cultivate relationships with generational growers who obsess over their craft the way we obsess over ours, and bring back only what genuinely moved us.
+            If it didn't seduce us first, it won't reach your door.
+          </p>
+
+          <!-- Logo -->
+          <div style="text-align: center; margin-top: 2em;">
+            <a href="/">
+              <img src="/images/negative-logo-transparent-background.png" alt="Tease Logo" style="height: 7em; width: auto; display: inline-block;" />
+            </a>
+          </div>
         </div>
 
-      </div>
-
-      <!-- Row: Image overlapping previous div -->
+        <!-- Row: Image overlapping dark div -->
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.15; z-index: 1; pointer-events: none;">
           <img src="/images/20260609-tease-blog-banners-white-tea-leaves-left.png" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
         </div>
@@ -53,15 +57,14 @@ import Footer from '../components/Footer.astro';
         </div>
         <div class="w-full md:w-1/2">
           <h2>How It Works:</h2>
-          <p>Every month, we will issue a newsletter featuring access to events and this seasons’ tea selection.
-          </p>
+          <p>Every month, we will issue a newsletter featuring access to events and this seasons' tea selection.</p>
         </div>
       </div>
 
       <!-- Row: Full Width Banner -->
       <div style="height: 7em; overflow: hidden; width: 100vw; margin-left: calc(-50vw + 50%);">
         <img
-          src="/images/20260608 tease blog banners tea kettle pour.png"
+          src="/images/20260608-tease-blog-banners-tea-kettle-pour.png"
           alt=""
           class="img-tilt-both"
           style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0;"
@@ -75,8 +78,7 @@ import Footer from '../components/Footer.astro';
         </div>
         <div class="w-full md:w-1/2">
           <h2>Teas That Move You</h2>
-          <p>Our mission is simple: connecting 100 tea lovers with exclusive opportunities to sip and savor premium flavors in an intimate setting.
-          </p>
+          <p>Our mission is simple: connecting 100 tea lovers with exclusive opportunities to sip and savor premium flavors in an intimate setting.</p>
         </div>
       </div>
 
