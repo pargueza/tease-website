@@ -3,7 +3,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-import Hero from '../components/Hero.astro';
 import { getEntry, render } from 'astro:content';
 
 const home = await getEntry('pages', 'home');
@@ -17,8 +16,8 @@ const { Content } = home ? await render(home) : { Content: null };
   </head>
   <body>
     <Header />
-    <main class="fade-up">
-      <main class="fade-up" style="padding-top: 0; padding-bottom: 0;">
+    <main class="fade-up" style="padding-top: 0; padding-bottom: 0;">
+
       <!-- Row: Full Width Banner -->
       <div style="height: 7em; overflow: hidden; width: 100vw; margin-left: calc(-50vw + 50%);">
         <img
