@@ -276,10 +276,15 @@ hr {
   transform: scale(1.05);
 }
 
-.img-tilt-right { /* Tilted image */
+.img-tilt-both { /* Tilted image both edges for banner strips and dividers*/
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%)
+
+}
+
+.img-tilt-right { /* Tilted image bottom right */
   clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
 }
 
-.img-tilt-left { /* Tilted image */
+.img-tilt-left { /* Tilted image bottom left */
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 72%);
 }
