@@ -17,12 +17,12 @@
 
 html {
   background-color: var(--color-parchment);
-  font-size: 16px; /* mobile base */
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 17px; /* tablet and desktop */
+    font-size: 17px;
   }
 }
 
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5rem 0;
   color: rgb(var(--black));
   line-height: 1.2;
-  font-size: 1em; /* default all headings to 1em */
+  font-size: 1em;
 }
 
 h1 {
@@ -123,9 +123,10 @@ hr {
 /* ============================================
    BLOGS
    ============================================ */
-   .date {
-    display: none;
-  }
+
+.date {
+  display: none;
+}
 
 /* ============================================
    BUTTONS
@@ -216,42 +217,6 @@ hr {
 }
 
 /* ============================================
-   TYPOGRAPHY UTILITIES
-   ============================================ */
-
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-
-/* ============================================
-   SPACING
-   ============================================ */
-
-.section { padding: 4rem 2rem; }
-.section-sm { padding: 2rem 1rem; }
-
-/* ============================================
-   LAYOUT
-   ============================================ */
-
-.full-width {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.divider {
-  border: none;
-  border-top: 1px solid var(--color-aged-silver);
-  margin: 2rem 0;
-}
-
-/* ============================================
    CARDS
    ============================================ */
 
@@ -261,42 +226,13 @@ hr {
   border-radius: 8px;
   border: 1px solid transparent;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  color: var(--color-inkwell);
 }
 
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
   border-color: var(--color-raw-gold);
-}
-
-/* ============================================
-   IMAGE ZOOM ON HOVER
-   ============================================ */
-
-.img-zoom {
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.img-zoom img {
-  transition: transform 0.4s ease;
-}
-
-.img-zoom:hover img {
-  transform: scale(1.05);
-}
-
-/* ============================================
-   NAV ITALIC HOVER
-   ============================================ */
-
-nav a {
-  transition: font-style 0.2s ease, color 0.2s ease;
-}
-
-nav a:hover {
-  font-style: italic;
-  font-family: var(--font-display);
 }
 
 /* ============================================
@@ -346,19 +282,20 @@ a:hover::after {
 }
 
 /* ============================================
-   TILTED IMAGE EFFECTS
+   IMAGE ZOOM ON HOVER
    ============================================ */
 
-.img-tilt-right {
-  clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
+.img-zoom {
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-.img-tilt-left {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 72%);
+.img-zoom img {
+  transition: transform 0.4s ease;
 }
 
-.img-tilt-both {
-  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+.img-zoom:hover img {
+  transform: scale(1.05);
 }
 
 /* ============================================
@@ -381,6 +318,57 @@ a:hover::after {
 }
 
 /* ============================================
+   LAYOUT
+   ============================================ */
+
+.full-width {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-aged-silver);
+  margin: 2rem 0;
+}
+
+/* ============================================
+   NAV ITALIC HOVER
+   ============================================ */
+
+nav a {
+  transition: font-style 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  font-style: italic;
+  font-family: var(--font-display);
+}
+
+/* ============================================
+   PARALLAX BANNER
+   ============================================ */
+
+.parallax-banner {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .parallax-banner {
+    background-attachment: scroll;
+  }
+}
+
+/* ============================================
    PARALLAX HERO
    ============================================ */
 
@@ -389,6 +377,13 @@ a:hover::after {
   background-size: cover;
   background-position: center;
 }
+
+/* ============================================
+   SPACING
+   ============================================ */
+
+.section { padding: 4rem 2rem; }
+.section-sm { padding: 2rem 1rem; }
 
 /* ============================================
    TEXT REVEAL
@@ -411,3 +406,27 @@ a:hover::after {
     transform: translateY(0);
   }
 }
+
+/* ============================================
+   TILTED IMAGE EFFECTS
+   ============================================ */
+
+.img-tilt-right {
+  clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
+}
+
+.img-tilt-left {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 72%);
+}
+
+.img-tilt-both {
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES
+   ============================================ */
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
