@@ -352,7 +352,7 @@ nav a:hover {
 }
 
 /* ============================================
-   PARALLAX BANNER
+   PARALLAX BANNER IMAGES
    ============================================ */
 
 .parallax-banner {
@@ -366,16 +366,6 @@ nav a:hover {
   .parallax-banner {
     background-attachment: scroll;
   }
-}
-
-/* ============================================
-   PARALLAX HERO
-   ============================================ */
-
-.parallax {
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
 }
 
 /* ============================================
