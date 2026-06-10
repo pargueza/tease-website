@@ -18,16 +18,15 @@ import Footer from '../components/Footer.astro';
         <img
           src="/images/20260608-tease-blog-banners-tea-kettle-pour.png"
           alt=""
-          class="img-tilt-right"
+          class="img-tilt-right parallax-banner"
           style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 0;"
         />
       </div>
 
       <!-- Wrapper: Dark section + leaf overlay -->
-      <div style="position: relative; width: 100vw; margin-left: calc(-50vw + 50%); margin-top: -3em;">
-
+      <div style="position: relative; width: 100vw; margin-left: calc(-50vw + 50%);">
         <!-- Row: Text -->
-        <div class="px-6 py-16 text-center" style="background: var(--accent-dark); color: var(--color-parchment); position: relative; z-index: 0;">
+        <div class="px-6 py-16 text-center" style="background: var(--accent-dark); color: var(--color-parchment); position: relative; z-index: 0; margin-top: -3em;">
           <h1 style="color: var(--color-raw-gold);">Our Promise:</h1>
           <p style="color: var(--color-parchment); max-width: 720px; margin: 0 auto;">
             Every tea in our collection made us stop mid-sip and take notes. If it doesn't make us obsessed, it doesn't go to your table.
@@ -53,7 +52,9 @@ import Footer from '../components/Footer.astro';
       <!-- Row: Image Left / Text Right -->
       <div class="flex flex-col md:flex-row items-center gap-8 px-6 py-12 max-w-6xl mx-auto">
         <div class="w-full md:w-1/2">
-          <img src="/images/mens-hoodie.png" alt="Our Story" class="w-full h-auto rounded-lg" />
+          <img src="/images/mens-hoodie.png" 
+          alt="Our Story" 
+          class="w-full h-auto rounded-lg" />
         </div>
         <div class="w-full md:w-1/2">
           <h2>How It Works:</h2>
