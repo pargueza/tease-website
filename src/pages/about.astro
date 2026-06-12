@@ -9,45 +9,81 @@ import Footer from '../components/Footer.astro';
   <head>
     <BaseHead title="About" description="About Tease" />
   </head>
+
   <body>
     <Header />
+
     <main class="fade-up" style="padding-top: 0; padding-bottom: 0;">
 
       <!-- Row: Full Width Banner -->
       <div 
         class="img-tilt-right parallax-banner"
-        style="height: 10em; width: 100vw; margin-left: calc(-50vw + 50%); background-image: url('/images/20260608-tease-blog-banners-tea-kettle-pour.png');"
-      >
-      </div>
+        style="
+          height: 10em;
+          width: 100vw;
+          margin-left: calc(-50vw + 50%);
+          background-image: url('/images/20260608-tease-blog-banners-tea-kettle-pour.png');
+        "
+      ></div>
 
       <!-- Wrapper: Dark section + leaf overlay -->
       <div style="position: relative; width: 100vw; margin-left: calc(-50vw + 50%);">
+
         <!-- Row: Text -->
-        <div class="px-6 py-16 text-center" style="background: var(--accent-dark); color: var(--color-parchment); position: relative; z-index: 0; margin-top: -3em;">
+        <div 
+          class="px-6 py-16 text-center"
+          style="
+            background: var(--accent-dark);
+            color: var(--color-parchment);
+            position: relative;
+            z-index: 0;
+            margin-top: -3em;
+          "
+        >
           <h1 style="color: var(--color-raw-gold);">Our Promise:</h1>
+
           <p style="color: var(--color-parchment); max-width: 720px; margin: 0 auto;">
-            Every tea in our collection made us stop mid-sip and take notes. If it doesn't make us obsessed, it doesn't go to your table. 
-            <br>We cultivate relationships with generational growers who obsess over their craft the way we obsess over ours, and bring back only what genuinely moved us. 
-            <br>If it didn't seduce us first, it won't reach your door.
+            Every tea in our collection made us stop mid-sip and take notes. If it doesn't make us obsessed, it doesn't go to your table.
+            <br />
+            We cultivate relationships with generational growers who obsess over their craft the way we obsess over ours, and bring back only what genuinely moved us.
+            <br />
+            If it didn't seduce us first, it won't reach your door.
           </p>
-          <!-- Logo -->
+
           <div style="text-align: center; margin-top: 2em;">
             <a href="/">
-              <img src="/images/negative-logo-transparent-background.png" alt="Tease Logo" style="height: 7em; width: auto; display: inline-block;" />
+              <img 
+                src="/images/negative-logo-transparent-background.png"
+                alt="Tease Logo"
+                style="height: 7em; width: auto; display: inline-block;"
+              />
             </a>
           </div>
         </div>
 
-        <!-- Row: Image overlapping dark div -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.15; z-index: 1; pointer-events: none;">
-          <img src="/images/20260609-tease-blog-banners-white-tea-leaves-left.png" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+        <!-- Leaf overlay -->
+        <div style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.15;
+          z-index: 1;
+          pointer-events: none;
+        ">
+          <img 
+            src="/images/20260609-tease-blog-banners-white-tea-leaves-left.png"
+            style="width: 100%; height: 100%; object-fit: cover; display: block;"
+          />
         </div>
 
       </div>
 
-      <!-- Row: Image Left / Text Right (FULL WIDTH BACKGROUND) -->
+      <!-- ========================= -->
+      <!-- HOW IT WORKS SECTION -->
+      <!-- ========================= -->
       <div
-        class="flex flex-col md:flex-row items-center gap-8 px-6 py-12"
         style="
           width: 100vw;
           margin-left: calc(-50vw + 50%);
@@ -57,60 +93,91 @@ import Footer from '../components/Footer.astro';
           background-size: cover;
           background-position: center;
         "
+        class="px-6 py-12"
       >
-        <!-- How it Works -->
         <div class="flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto w-full">
-          <div class="w-full md:w-1/2" style="background-color: var(--accent-dark); color: var(--color-parchment); padding: 10px; text-align: center;">
+
+          <div 
+            class="w-full md:w-1/2 text-center"
+            style="
+              background-color: var(--accent-dark);
+              color: var(--color-parchment);
+              padding: 16px;
+            "
+          >
             <h2 style="color: var(--color-parchment);">How It Works:</h2>
             <p>
               Every month, we will issue a newsletter featuring access to events and this seasons' tea selection.
             </p>
           </div>
+
           <div class="w-full md:w-1/2">
-            <!--img ADD LATER
+            <!-- image placeholder -->
+            <!--
+            <img
               src="/images/mens-hoodie.png"
               alt=""
               class="w-full h-auto rounded-lg"
-            /-->
+            />
+            -->
           </div>
+
         </div>
+      </div>
 
-        <!-- Club Tiers -->
-        <div class="flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto w-full">
-          <div class="w-full md:w-1/2" style="background-color: var(--accent-dark); color: var(--color-parchment); padding: 10px; text-align: center;">
-            <h2 style="color: var(--color-parchment);">Membership Perks</h2>\
-            <p>Every month, we will issue a newsletter featuring access to events and this seasons' tea selection.</p>
+      <!-- ========================= -->
+      <!-- MEMBERSHIP TIERS -->
+      <!-- ========================= -->
+      <div class="px-6 py-16">
+
+        <div class="flex flex-col md:flex-row items-stretch gap-8 max-w-6xl mx-auto w-full">
+
+          <!-- Intro Box -->
+          <div 
+            class="w-full md:w-1/3 text-center"
+            style="
+              background-color: var(--accent-dark);
+              color: var(--color-parchment);
+              padding: 16px;
+            "
+          >
+            <h2 style="color: var(--color-parchment);">Membership Perks</h2>
+            <p>
+              Every month, we will issue a newsletter featuring access to events and this seasons' tea selection.
+            </p>
           </div>
 
-          <!-- Bronze Member Benefits -->
-          <div class="w-full md:w-1/3">
+          <!-- Bronze -->
+          <div class="w-full md:w-1/3 text-center">
             <h3>Bronze</h3>
             <p>75g of tea delivered to your door monthly</p>
           </div>
-          
-          <!-- Gold Member Benefits -->
-          <div class="w-full md:w-1/3">
+
+          <!-- Gold -->
+          <div class="w-full md:w-1/3 text-center">
             <h3>Gold</h3>
             <p>
-              150g of tea delivered to your door monthly
-              <br>Invite-only event access
+              150g of tea delivered to your door monthly<br />
+              Invite-only event access
             </p>
           </div>
 
-          <!-- Platinum Member Benefits -->
-          <div class="w-full md:w-1/3">
+          <!-- Platinum -->
+          <div class="w-full md:w-1/3 text-center">
             <h3>Platinum</h3>
             <p>
-              300g of tea delivered to your door monthly
-              <b>All benefits of Gold Membership plus:</b>
-              <br>First-buy access to rare teas
-              <br>10% off merchandise
+              300g of tea delivered to your door monthly<br />
+              <strong>All benefits of Gold Membership plus:</strong><br />
+              First-buy access to rare teas<br />
+              10% off merchandise
             </p>
           </div>
 
         </div>
+      </div>
 
     </main>
+
     <Footer />
   </body>
 </html>
