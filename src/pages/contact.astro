@@ -18,7 +18,18 @@ const { Content } = about ? await render(about) : { Content: null };
     <Header />
 
     <main class="fade-up">
-      <div>
+      <div
+        style="
+          width: 100vw;
+          margin-left: calc(-50vw + 50%);
+          min-height: 25em;
+          background-image: url('/images/20260608-tease-blog-banners-white-tea.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        "
+        class="px-6 py-12, parallax-image"
+      >
         <!-- Embedded Contact Form -->
         <script src="https://anvil.works/embed.js" async></script>
         <iframe data-anvil-embed src="https://luminous-trim-sweet.anvil.app"></iframe>
