@@ -14,10 +14,10 @@ const { Content } = about ? await render(about) : { Content: null };
     <BaseHead title="Contact" description="Contact Tease" />
 
     <style>
-      /* IMPORTANT: removes default browser offset */
-      body {
+      html, body {
         margin: 0;
-        overflow-x: hidden;
+        padding: 0;
+        overflow-x: hidden; /* THIS prevents right-space bug */
       }
 
       main {
@@ -25,7 +25,13 @@ const { Content } = about ? await render(about) : { Content: null };
         padding: 0;
       }
 
-      /* Your original parallax behavior (unchanged logic) */
+      /* YOUR ORIGINAL FULL BLEED FIX (kept, but now safe) */
+      .full-bleed {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+      }
+
+      /* PARALLAX */
       .parallax-banner {
         min-height: 120vh;
         background-image: url('/images/20260608-tease-blog-banners-white-tea.png');
@@ -41,7 +47,7 @@ const { Content } = about ? await render(about) : { Content: null };
         }
       }
 
-      /* Fix iframe layout so it doesn't distort page width */
+      /* EMBED FIX (prevents layout distortion) */
       .embed-wrapper {
         display: flex;
         justify-content: center;
@@ -65,7 +71,7 @@ const { Content } = about ? await render(about) : { Content: null };
 
     <main class="fade-up">
 
-      <!-- CONTACT EMBED (centered, no layout breaking) -->
+      <!-- CONTACT FORM -->
       <div class="embed-wrapper">
         <script src="https://anvil.works/embed.js" async></script>
         <iframe
@@ -74,8 +80,8 @@ const { Content } = about ? await render(about) : { Content: null };
         ></iframe>
       </div>
 
-      <!-- PARALLAX BANNER (flush, no width hacks needed) -->
-      <section class="parallax-banner"></section>
+      <!-- PARALLAX BANNER -->
+      <section class="full-bleed parallax-banner"></section>
 
     </main>
 
