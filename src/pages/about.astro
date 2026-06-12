@@ -15,7 +15,9 @@ import Footer from '../components/Footer.astro';
 
     <main class="fade-up" style="padding-top: 0; padding-bottom: 0;">
 
-      <!-- Row: Full Width Banner -->
+      <!-- ========================= -->
+      <!-- FULL WIDTH BANNER -->
+      <!-- ========================= -->
       <div 
         class="img-tilt-right parallax-banner"
         style="
@@ -26,10 +28,11 @@ import Footer from '../components/Footer.astro';
         "
       ></div>
 
-      <!-- Wrapper: Dark section + leaf overlay -->
+      <!-- ========================= -->
+      <!-- PROMISE SECTION -->
+      <!-- ========================= -->
       <div style="position: relative; width: 100vw; margin-left: calc(-50vw + 50%);">
 
-        <!-- Row: Text -->
         <div 
           class="px-6 py-16 text-center"
           style="
@@ -61,7 +64,7 @@ import Footer from '../components/Footer.astro';
           </div>
         </div>
 
-        <!-- Leaf overlay -->
+        <!-- leaf overlay -->
         <div style="
           position: absolute;
           top: 0;
@@ -81,7 +84,7 @@ import Footer from '../components/Footer.astro';
       </div>
 
       <!-- ========================= -->
-      <!-- HOW IT WORKS SECTION -->
+      <!-- HOW IT WORKS -->
       <!-- ========================= -->
       <div
         style="
@@ -111,18 +114,31 @@ import Footer from '../components/Footer.astro';
             </p>
           </div>
 
-          <div class="w-full md:w-1/2">
-            <!-- image placeholder -->
-            <!--
-            <img
-              src="/images/mens-hoodie.png"
-              alt=""
-              class="w-full h-auto rounded-lg"
-            />
-            -->
-          </div>
+          <div class="w-full md:w-1/2"></div>
 
         </div>
+      </div>
+
+      <!-- ========================= -->
+      <!-- MEMBERSHIP PERKS (FULL BLEED HEADER) -->
+      <!-- ========================= -->
+      <div
+        style="
+          width: 100vw;
+          margin-left: calc(-50vw + 50%);
+          background-color: var(--accent-dark);
+          color: var(--color-parchment);
+          text-align: center;
+          padding: 24px 16px;
+        "
+      >
+        <h2 style="margin: 0; color: var(--color-parchment);">
+          Membership Perks
+        </h2>
+
+        <p style="margin: 8px 0 0 0;">
+          Every month, we will issue a newsletter featuring access to events and this seasons' tea selection.
+        </p>
       </div>
 
       <!-- ========================= -->
@@ -130,25 +146,6 @@ import Footer from '../components/Footer.astro';
       <!-- ========================= -->
       <div class="px-6 py-16">
 
-        <!-- Membership Intro (SEPARATE DIV) -->
-        <div class="max-w-6xl mx-auto w-full text-center mb-10">
-
-          <div
-            style="
-              background-color: var(--accent-dark);
-              color: var(--color-parchment);
-              padding: 16px;
-            "
-          >
-            <h2 style="color: var(--color-parchment);">Membership Perks</h2>
-            <p>
-              Every month, we will issue a newsletter featuring access to events and this seasons' tea selection.
-            </p>
-          </div>
-
-        </div>
-
-        <!-- Tier Cards -->
         <div class="flex flex-col md:flex-row items-stretch gap-8 max-w-6xl mx-auto w-full">
 
           <!-- Bronze -->
@@ -178,7 +175,6 @@ import Footer from '../components/Footer.astro';
           </div>
 
         </div>
-
       </div>
 
     </main>
