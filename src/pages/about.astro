@@ -45,20 +45,38 @@ import Footer from '../components/Footer.astro';
 
       </div>
 
-      <!-- Row: Image Left / Text Right -->
-      <div class="flex flex-col md:flex-row items-center gap-8 px-6 py-12 max-w-6xl mx-auto" 
-      style="top: 0; left: 0; width: 100%; height: 100%; background-image: url('/images/20260608-tease-blog-banners-white-tea.png'); background-repeat: no-repeat; background-size: cover; background-position: center; min-height: 25em;">        
-        <div class="w-full md:w-1/2">
-          <img src="/images/mens-hoodie.png" 
-          alt="Our Story" 
-          class="w-full h-auto rounded-lg" />
-        </div>
+      <!-- Row: Image Left / Text Right (FULL WIDTH BACKGROUND) -->
+      <div
+        class="flex flex-col md:flex-row items-center gap-8 px-6 py-12"
+        style="
+          width: 100vw;
+          margin-left: calc(-50vw + 50%);
+          min-height: 25em;
+          background-image: url('/images/20260608-tease-blog-banners-white-tea.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <!-- Inner content wrapper (keeps text readable + aligned) -->
+        <div class="flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto w-full">
+          
+          <div class="w-full md:w-1/2">
+            <img 
+              src="/images/mens-hoodie.png" 
+              alt="Our Story" 
+              class="w-full h-auto rounded-lg"
+            />
+          </div>
 
-        <div class="w-full md:w-1/2">
-          <h2>How It Works:</h2>
-          <p>Every month, we will issue a newsletter featuring access to events and this seasons' tea selection.</p>
-        </div>
+          <div class="w-full md:w-1/2">
+            <h2>How It Works:</h2>
+            <p>
+              Every month, we will issue a newsletter featuring access to events and this seasons' tea selection.
+            </p>
+          </div>
 
+        </div>
       </div>
 
 
