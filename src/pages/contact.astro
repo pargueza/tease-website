@@ -18,24 +18,12 @@ const { Content } = about ? await render(about) : { Content: null };
     <Header />
 
     <main class="fade-up">
-
-      <!-- PARALLAX BANNER (background only) -->
-      <section
-        class="parallax-banner"
-        style="
-          width: 100vw;
-          margin-left: calc(-50vw + 50%);
-          min-height: 120vh;
-          background-image: url('/images/20260608-tease-blog-banners-white-tea.png');
-        "
-      >
-      
+      <div>
         <!-- Embedded Contact Form -->
         <script src="https://anvil.works/embed.js" async></script>
         <iframe data-anvil-embed src="https://luminous-trim-sweet.anvil.app"></iframe>
-
-      </section>
-
+      </div>
+      
     </main>
 
     <Footer />
