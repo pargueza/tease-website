@@ -12,58 +12,6 @@ const { Content } = about ? await render(about) : { Content: null };
 <html lang="en">
   <head>
     <BaseHead title="Contact" description="Contact Tease" />
-
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden; /* THIS prevents right-space bug */
-      }
-
-      main {
-        margin: 0;
-        padding: 0;
-      }
-
-      /* YOUR ORIGINAL FULL BLEED FIX (kept, but now safe) */
-      .full-bleed {
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
-      }
-
-      /* PARALLAX */
-      .parallax-banner {
-        min-height: 120vh;
-        background-image: url('/images/20260608-tease-blog-banners-white-tea.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-      }
-
-      @media (max-width: 768px) {
-        .parallax-banner {
-          background-attachment: scroll;
-        }
-      }
-
-      /* EMBED FIX (prevents layout distortion) */
-      .embed-wrapper {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        padding: 2rem 0;
-      }
-
-      .embed-wrapper iframe {
-        width: min(700px, 92vw);
-        height: 70vh;
-        border: 0;
-        display: block;
-        background: white;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-      }
-    </style>
   </head>
 
   <body>
@@ -71,17 +19,22 @@ const { Content } = about ? await render(about) : { Content: null };
 
     <main class="fade-up">
 
-      <!-- CONTACT FORM -->
-      <div class="embed-wrapper">
+      <!-- PARALLAX BANNER (background only) -->
+      <section
+        class="parallax-banner"
+        style="
+          width: 100vw;
+          margin-left: calc(-50vw + 50%);
+          min-height: 120vh;
+          background-image: url('/images/20260608-tease-blog-banners-white-tea.png');
+        "
+      >
+      
+        <!-- Embedded Contact Form -->
         <script src="https://anvil.works/embed.js" async></script>
-        <iframe
-          data-anvil-embed
-          src="https://luminous-trim-sweet.anvil.app"
-        ></iframe>
-      </div>
+        <iframe data-anvil-embed src="https://luminous-trim-sweet.anvil.app"></iframe>
 
-      <!-- PARALLAX BANNER -->
-      <section class="full-bleed parallax-banner"></section>
+      </section>
 
     </main>
 
