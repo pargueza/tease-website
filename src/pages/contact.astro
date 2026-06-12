@@ -12,33 +12,60 @@ const { Content } = about ? await render(about) : { Content: null };
 <html lang="en">
   <head>
     <BaseHead title="Contact" description="Contact Tease" />
+
+    <style>
+      body {
+        margin: 0;
+        overflow-x: hidden;
+      }
+
+      /* Keeps your full-bleed behavior stable */
+      .parallax-image {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-top: -3em;
+        min-height: 25em;
+
+        background-image: url('/images/20260608-tease-blog-banners-white-tea.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Fix iframe centering + width issues */
+      .parallax-image iframe {
+        width: min(800px, 92vw);
+        height: 70vh;
+        border: 0;
+        display: block;
+        background: white;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      }
+    </style>
   </head>
 
   <body>
     <Header />
 
     <main class="fade-up">
-      <div
-        style="
-          width: 100vw;
-          margin-left: calc(-50vw + 50%);
-          margin-top: -3em;
-          min-height: 25em;
-          background-image: url('/images/20260608-tease-blog-banners-white-tea.png');
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-        "
-        class="parallax-image"
-      >
+
+      <div class="parallax-image">
+
         <div>
           <!-- Embedded Contact Form -->
           <script src="https://anvil.works/embed.js" async></script>
-          <iframe data-anvil-embed src="https://luminous-trim-sweet.anvil.app"></iframe>
+          <iframe
+            data-anvil-embed
+            src="https://luminous-trim-sweet.anvil.app"
+          ></iframe>
         </div>
 
       </div>
-      
+
     </main>
 
     <Footer />
