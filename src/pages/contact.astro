@@ -17,15 +17,6 @@ const { Content } = about ? await render(about) : { Content: null };
   <body>
     <Header />
 
-    <!-- FIXED EMBED (independent layer) -->
-    <div class="fixed-embed">
-      <script src="https://anvil.works/embed.js" async></script>
-      <iframe
-        data-anvil-embed
-        src="https://luminous-trim-sweet.anvil.app"
-      ></iframe>
-    </div>
-
     <main class="fade-up">
 
       <!-- PARALLAX BANNER (background only) -->
@@ -36,8 +27,19 @@ const { Content } = about ? await render(about) : { Content: null };
           margin-left: calc(-50vw + 50%);
           min-height: 120vh;
           background-image: url('/images/20260608-tease-blog-banners-white-tea.png');
-        "
-      ></section>
+        ">
+      
+        <!-- Embedded Contact Form -->
+        <div class="fixed-embed">
+          <script src="https://anvil.works/embed.js" async></script>
+          <iframe
+            data-anvil-embed
+            src="https://luminous-trim-sweet.anvil.app"
+          ></iframe>
+          
+        </div>
+
+      </section>
 
     </main>
 
