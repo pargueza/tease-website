@@ -12,34 +12,75 @@ const { Content } = about ? await render(about) : { Content: null };
 <html lang="en">
   <head>
     <BaseHead title="Contact" description="Contact Tease" />
+
+    <style>
+      body {
+        margin: 0;
+        overflow-x: hidden;
+      }
+
+      main {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* FULL BLEED FIX */
+      .full-bleed {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+      }
+
+      /* PARALLAX BANNER */
+      .parallax-banner {
+        min-height: 120vh;
+        background-image: url('/images/20260608-tease-blog-banners-white-tea.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      @media (max-width: 768px) {
+        .parallax-banner {
+          background-attachment: scroll;
+        }
+      }
+
+      /* CENTERED CONTACT EMBED */
+      .contact-embed {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: min(700px, 92vw);
+        height: 70vh;
+        z-index: 999;
+        background: white;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+      }
+
+      .contact-embed iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+    </style>
   </head>
 
   <body>
     <Header />
 
+    <!-- FIXED CONTACT FORM (centered, not affected by layout) -->
+    <div class="contact-embed">
+      <script src="https://anvil.works/embed.js" async></script>
+      <iframe data-anvil-embed src="https://luminous-trim-sweet.anvil.app"></iframe>
+    </div>
+
     <main class="fade-up">
 
-      <!-- PARALLAX BANNER (background only) -->
-      <section
-        class="parallax-banner"
-        style="
-          width: 100vw;
-          margin-left: calc(-50vw + 50%);
-          min-height: 120vh;
-          background-image: url('/images/20260608-tease-blog-banners-white-tea.png');
-        ">
-      
-        <!-- Embedded Contact Form -->
-        <div class="fixed-embed">
-          <script src="https://anvil.works/embed.js" async></script>
-          <iframe
-            data-anvil-embed
-            src="https://luminous-trim-sweet.anvil.app"
-          ></iframe>
-          
-        </div>
-
-      </section>
+      <!-- PARALLAX BACKGROUND SECTION -->
+      <section class="full-bleed parallax-banner"></section>
 
     </main>
 
