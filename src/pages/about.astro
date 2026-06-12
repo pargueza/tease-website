@@ -58,10 +58,14 @@ import Footer from '../components/Footer.astro';
           background-position: center;
         "
       >
-        <!-- Inner content wrapper (keeps text readable + aligned) -->
-        <div
-          class="flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto w-full"
-        >
+        <!-- How it Works -->
+        <div class="flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto w-full">
+          <div class="w-full md:w-1/2" style="background-color: var(--accent-dark); color: var(--color-parchment); padding: 10px; text-align: center;">
+            <h2 style="color: var(--color-parchment);">How It Works:</h2>
+            <p>
+              Every month, we will issue a newsletter featuring access to events and this seasons' tea selection.
+            </p>
+          </div>
           <div class="w-full md:w-1/2">
             <!--img ADD LATER
               src="/images/mens-hoodie.png"
@@ -69,23 +73,42 @@ import Footer from '../components/Footer.astro';
               class="w-full h-auto rounded-lg"
             /-->
           </div>
-
-          <div
-            class="w-full md:w-1/2"
-            style="
-              background-color: var(--accent-dark);
-              color: var(--color-parchment);
-              padding: 10px;
-              text-align: center;
-            "
-          >
-            <h2 style="color: var(--color-parchment);">How It Works:</h2>
-            <p>
-              Every month, we will issue a newsletter featuring access to events and this seasons' tea selection.
-            </p>
-          </div>
         </div>
 
+        <!-- Club Tiers -->
+        <div class="flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto w-full">
+          <div class="w-full md:w-1/2" style="background-color: var(--accent-dark); color: var(--color-parchment); padding: 10px; text-align: center;">
+            <h2 style="color: var(--color-parchment);">Membership Perks</h2>\
+            <p>Every month, we will issue a newsletter featuring access to events and this seasons' tea selection.</p>
+          </div>
+
+          <!-- Bronze Member Benefits -->
+          <div>
+            <h3>Bronze</h3>
+            <p>75g of tea delivered to your door monthly</p>
+          </div>
+          
+          <!-- Gold Member Benefits -->
+          <div>
+            <h3>Gold</h3>
+            <p>
+              150g of tea delivered to your door monthly
+              <br>Invite-only event access
+            </p>
+          </div>
+
+          <!-- Platinum Member Benefits -->
+          <div>
+            <h3>Platinum</h3>
+            <p>
+              300g of tea delivered to your door monthly
+              <b>All benefits of Gold Membership plus:</b>
+              <br>First-buy access to rare teas
+              <br>10% off merchandise
+            </p>
+          </div>
+
+        </div>
 
     </main>
     <Footer />
