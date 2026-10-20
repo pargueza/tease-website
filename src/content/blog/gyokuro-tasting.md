@@ -7,7 +7,7 @@ heroImage: ../../assets/blog-placeholder-3.jpg
 ---
 ## All About Gyokuro
 
-Today, James and Nadine explored gyokuro, a rare and contemplative Japanese green tea. With a vegetal base layered with notes of sea algae and citrus peel, it's a must-try for those who lean towards savory flavors.
+Today, we explored gyokuro, a rare and contemplative Japanese green tea. With a vegetal base layered with notes of sea algae and citrus peel, it's a must-try for those who lean towards savory flavors.
 
 ![James and Nadine taste and compare Uji vs. Syuppin gyokuro](/images/20260524-good-morning.png)
 
