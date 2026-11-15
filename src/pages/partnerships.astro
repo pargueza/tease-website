@@ -17,9 +17,30 @@ import Footer from '../components/Footer.astro';
 
       /* PARTNER INFO */
       .partner {
-        max-width: 720px;
+        max-width: 1000px;
         margin: 0 auto;
         padding: 3rem 1rem 6rem;
+      }
+
+      .partner h1 {
+        margin-bottom: 2rem;
+      }
+
+      .partner-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0 3rem;
+      }
+
+      /* TABLET AND DESKTOP: 2 COLUMNS */
+      @media (min-width: 768px) {
+        .partner-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .partner-grid .span-2 {
+          grid-column: 1 / -1;
+        }
       }
 
       .partner ul {
@@ -73,32 +94,46 @@ import Footer from '../components/Footer.astro';
       <section class="partner">
         <h1>Partner with Tease</h1>
 
-        <h2>About Tease</h2>
-        <p>
-          Tease is a luxury tea club in the San Francisco Bay Area. We source rare whole-leaf teas from generational growers and share them with 100 founding members.
-        </p>
+        <div class="partner-grid">
 
-        <h2>Why we're here</h2>
-        <p>
-          We're filming social media content at the festival and meeting vendors we'd like to work with.
-        </p>
+          <div>
+            <h2>About Tease</h2>
+            <p>
+              Tease is a luxury tea club in the San Francisco Bay Area. We source rare whole-leaf teas from generational growers and share them with 100 founding members.
+            </p>
+          </div>
 
-        <h2>What partnership includes</h2>
-        <ul>
-          <li>A place on our preferred vendors list</li>
-          <li>A chance to be featured at our upcoming tasting dinners</li>
-          <li>With your permission, a feature in the content we're filming today</li>
-        </ul>
+          <div>
+            <h2>Why we're here</h2>
+            <p>
+              We're filming social media content at the festival and meeting vendors we'd like to work with.
+            </p>
+          </div>
 
-        <h2>Tasting dinners</h2>
-        <p>
-          Small, seated dinners pairing premium tea with food. This December we're launching an event series for founders and funders, pairing premium tea with amuse-bouche.
-        </p>
+          <div>
+            <h2>What partnership includes</h2>
+            <ul>
+              <li>A place on our preferred vendors list</li>
+              <li>A chance to be featured at our upcoming tasting dinners</li>
+              <li>With your permission, a feature in the content we're filming today</li>
+            </ul>
+          </div>
 
-        <h2>Get on the list</h2>
-        <p>
-          Send us your business name, your name, your contact details, your Instagram handle, and what you make.
-        </p>
+          <div>
+            <h2>Tasting dinners</h2>
+            <p>
+              Small, seated dinners pairing premium tea with food. This December we're launching an event series for founders and funders, pairing premium tea with amuse-bouche.
+            </p>
+          </div>
+
+          <div class="span-2">
+            <h2>Get on the list</h2>
+            <p>
+              Send us your business name, your name, your contact details, your Instagram handle, and what you make.
+            </p>
+          </div>
+
+        </div>
       </section>
 
       <div class="parallax-image">
