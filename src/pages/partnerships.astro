@@ -1,3 +1,122 @@
 ---
-title: Contact Tease
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title="Partnerships" description="Partner with Tease" />
+
+    <style>
+      body {
+        margin: 0;
+        overflow-x: hidden;
+      }
+
+      /* PARTNER INFO */
+      .partner {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 3rem 1rem 6rem;
+      }
+
+      .partner ul {
+        list-style: disc;
+        padding-left: 1.5em;
+        margin-bottom: 1em;
+      }
+
+      /* FULL WIDTH BANNER */
+      .parallax-image {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-top: -3em;
+        margin-bottom: -3em;
+        min-height: 25em;
+
+        background-image: url('/images/20260608-tease-blog-banners-white-tea.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        /* IMPORTANT: do NOT use flex here (it breaks embeds) */
+      }
+
+      /* INNER WRAPPER controls centering safely */
+      .form-wrapper {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 4rem 1rem;
+      }
+
+      /* FORCE iframe centering reliably */
+      .form-wrapper iframe {
+        display: block;
+        margin: 0 auto;
+        width: min(800px, 92vw);
+        height: 70vh;
+        border: 0;
+        background: white;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      }
+    </style>
+  </head>
+
+  <body>
+    <Header />
+
+    <main class="fade-up">
+
+      <section class="partner">
+        <h1>Partner with Tease</h1>
+
+        <h2>About Tease</h2>
+        <p>
+          Tease is a luxury tea club in the San Francisco Bay Area. We source rare whole-leaf teas from generational growers and share them with 100 founding members.
+        </p>
+
+        <h2>Why we're here</h2>
+        <p>
+          We're filming social media content at the festival and meeting vendors we'd like to work with.
+        </p>
+
+        <h2>What partnership includes</h2>
+        <ul>
+          <li>A place on our preferred vendors list</li>
+          <li>A chance to be featured at our upcoming tasting dinners</li>
+          <li>With your permission, a feature in the content we're filming today</li>
+        </ul>
+
+        <h2>Tasting dinners</h2>
+        <p>
+          Small, seated dinners pairing premium tea with food. This December we're launching an event series for founders and funders, pairing premium tea with amuse-bouche.
+        </p>
+
+        <h2>Get on the list</h2>
+        <p>
+          Send us your business name, your name, your contact details, your Instagram handle, and what you make.
+        </p>
+      </section>
+
+      <div class="parallax-image">
+        <div class="form-wrapper">
+
+          <!-- Embedded Contact Form -->
+          <script src="https://anvil.works/embed.js" async></script>
+
+          <iframe
+            data-anvil-embed
+            src="https://luminous-trim-sweet.anvil.app"
+          ></iframe>
+
+        </div>
+      </div>
+
+    </main>
+
+    <Footer />
+  </body>
+</html>
