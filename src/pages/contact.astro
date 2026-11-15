@@ -19,6 +19,19 @@ const { Content } = about ? await render(about) : { Content: null };
         overflow-x: hidden;
       }
 
+      /* PARTNER INFO */
+      .partner {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 3rem 1rem 6rem;
+      }
+
+      .partner ul {
+        list-style: disc;
+        padding-left: 1.5em;
+        margin-bottom: 1em;
+      }
+
       /* FULL WIDTH BANNER */
       .parallax-image {
         width: 100vw;
@@ -60,6 +73,37 @@ const { Content } = about ? await render(about) : { Content: null };
     <Header />
 
     <main class="fade-up">
+
+      <section class="partner">
+        <h1>Partner with Tease</h1>
+
+        <h2>About Tease</h2>
+        <p>
+          Tease is a luxury tea club in the San Francisco Bay Area. We source rare whole-leaf teas from generational growers and share them with 100 founding members.
+        </p>
+
+        <h2>Why we're here</h2>
+        <p>
+          We're filming social media content at the festival and meeting vendors we'd like to work with.
+        </p>
+
+        <h2>What partnership includes</h2>
+        <ul>
+          <li>A place on our preferred vendors list</li>
+          <li>A chance to be featured at our upcoming tasting dinners</li>
+          <li>With your permission, a feature in the content we're filming today</li>
+        </ul>
+
+        <h2>Tasting dinners</h2>
+        <p>
+          Small, seated dinners pairing premium tea with food. This December we're launching an event series for founders and funders, pairing premium tea with amuse-bouche.
+        </p>
+
+        <h2>Get on the list</h2>
+        <p>
+          Send us your business name, your name, your contact details, your Instagram handle, and what you make.
+        </p>
+      </section>
 
       <div class="parallax-image">
         <div class="form-wrapper">
