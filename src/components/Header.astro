@@ -86,6 +86,18 @@ import HeaderLink from './HeaderLink.astro';
     font-style: italic;
   }
 
+  /* Simple menu hover: no gold underline, no italic */
+  nav :global(a)::after {
+    display: none;
+  }
+  nav :global(a) {
+    transition: opacity 0.2s ease;
+  }
+  nav :global(a:hover) {
+    font-style: normal;
+    opacity: 0.7;
+  }
+
   /* Desktop: menu visible as a row */
   .menu {
     display: flex;

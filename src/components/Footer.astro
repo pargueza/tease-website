@@ -64,9 +64,14 @@ const today = new Date();
   .social-links a {
     text-decoration: none;
     color: var(--color-washi);
+    transition: opacity 0.2s ease;
   }
   .social-links a:hover {
-    color: var(--color-raw-gold);
+    opacity: 0.7;
+  }
+  /* Simple hover: no gold underline */
+  .social-links a::after {
+    display: none;
   }
   .footer-copyright {
     font-size: 0.85em;
