@@ -83,10 +83,20 @@ import HeaderLink from './HeaderLink.astro';
     color: var(--color-parchment);
     text-decoration: none;
     border-bottom-color: var(--accent);
-    font-style: italic;
   }
 
-  /* Simple menu hover: no gold underline, no italic */
+  /* One serif font for the whole nav: never changes on hover or on the active page */
+  nav :global(a),
+  nav :global(a:hover),
+  nav :global(a:focus),
+  nav :global(a.active) {
+    font-family: var(--font-display), Georgia, 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+  }
+
+  /* Simple menu hover: no gold underline */
   nav :global(a)::after {
     display: none;
   }
@@ -94,7 +104,6 @@ import HeaderLink from './HeaderLink.astro';
     transition: opacity 0.2s ease;
   }
   nav :global(a:hover) {
-    font-style: normal;
     opacity: 0.7;
   }
 
