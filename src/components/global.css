@@ -1,0 +1,452 @@
+@import './tokens.css';
+
+:root {
+  --accent:              #3D5A3E;
+  --accent-dark:         #2C3B2D;
+  --accent-crimson:      #8B2E2E;
+  --accent-light:        #5C7A5D;
+  --black: 15, 18, 25;
+  --gray: 96, 115, 159;
+  --gray-light: 229, 233, 240;
+  --gray-dark: 34, 41, 57;
+  --gray-gradient: rgba(var(--gray-light), 50%), #fff;
+  --box-shadow:
+    0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+    0 16px 32px rgba(var(--gray), 33%);
+}
+
+html {
+  background-color: var(--color-parchment);
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+body {
+  font-family: var(--font-atkinson);
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-size: 100% 600px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: var(--color-inkwell);
+  line-height: 1.7;
+}
+
+main {
+  width: 720px;
+  max-width: calc(100% - 2em);
+  margin: auto;
+  padding: 3em 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.5rem 0;
+  color: rgb(var(--black));
+  line-height: 1.2;
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 1.75em;
+  color: var(--color-crimson);
+}
+
+h2 {
+  font-size: 1.75em;
+  color: var(--color-crimson);
+}
+
+h3 { font-size: 1em; }
+h4 { font-size: 1em; }
+h5 { font-size: 1em; }
+
+strong, b { font-weight: 700; }
+a { color: var(--accent); }
+a:hover { color: var(--accent); }
+p { margin-bottom: 1em; font-size: 1em; }
+.prose p { margin-bottom: 2em; }
+textarea { width: 100%; font-size: 1em; }
+input { font-size: 1em; }
+table { width: 100%; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+code {
+  padding: 2px 5px;
+  background-color: rgb(var(--gray-light));
+  border-radius: 2px;
+}
+
+pre { padding: 1.5em; border-radius: 8px; }
+pre > code { all: unset; }
+
+blockquote {
+  border-left: 4px solid var(--accent);
+  padding: 0 0 0 20px;
+  margin: 0;
+  font-size: 1em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgb(var(--gray-light));
+}
+
+@media (max-width: 720px) {
+  main { padding: 1em; }
+}
+
+.sr-only {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ============================================
+   BLOGS
+   ============================================ */
+
+.date {
+  display: none;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: var(--color-parchment);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 1em;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 0;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-dark);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.btn:hover::before { left: 0; }
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover { color: var(--color-parchment); }
+
+.btn-shimmer {
+  background: var(--accent);
+  color: var(--color-parchment);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: rgba(200, 169, 110, 0.3);
+  transform: skewX(-20deg);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}
+
+.btn-pulse { position: relative; }
+
+.btn-pulse::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  animation: pulse-ring 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse-ring {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(1.4); opacity: 0; }
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+
+.card {
+  background: var(--color-washi);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  color: var(--color-inkwell);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-raw-gold);
+}
+
+/* ============================================
+   FADE-UP ON SCROLL
+   ============================================ */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ============================================
+   GOLD UNDERLINE SWEEP
+   ============================================ */
+
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-raw-gold);
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* ============================================
+   IMAGE ZOOM ON HOVER
+   ============================================ */
+
+.img-zoom {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.img-zoom img {
+  transition: transform 0.4s ease;
+}
+
+.img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   KEN BURNS — HERO IMAGES
+   ============================================ */
+
+.hero-ken-burns {
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-ken-burns img {
+  animation: ken-burns 12s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes ken-burns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-2%, -1%); }
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.full-width {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-aged-silver);
+  margin: 2rem 0;
+}
+
+/* ============================================
+   NAV ITALIC HOVER
+   ============================================ */
+
+nav a {
+  transition: font-style 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  font-style: italic;
+  font-family: var(--font-display);
+}
+
+/* ============================================
+   PARALLAX BANNER IMAGES
+   ============================================ */
+
+.parallax-banner {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .parallax-banner {
+    background-attachment: scroll;
+  }
+}
+
+/* ==========================================================
+   SCROLL REVEAL: text fades in and rises slightly as it
+   scrolls into view. The script in BaseHead.astro adds the
+   "reveal" class to text, then "in-view" when it is visible.
+   ========================================================== */
+
+/* Starting state: invisible and sitting slightly below its final spot */
+.reveal {
+  opacity: 0;
+  transform: translateY(10%); /* rise distance, as a % of the element's own height: bigger = more movement */
+  transition: opacity 1s linear, transform 1s linear; /* 1s = how long it takes */
+  transition-delay: var(--reveal-delay, 0ms); /* set per item by the script, so items appear one after another */
+}
+
+/* Final state: fully visible and in its normal position */
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accessibility: if a visitor has "reduce motion" turned on in their
+   device settings, skip the animation and show the text right away */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ============================================
+   SPACING
+   ============================================ */
+
+.section { padding: 4rem 2rem; }
+.section-sm { padding: 2rem 1rem; }
+
+/* ============================================
+   TEXT REVEAL
+   ============================================ */
+
+.text-reveal {
+  overflow: hidden;
+}
+
+.text-reveal span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: reveal 0.6s forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   TILTED IMAGE EFFECTS
+   ============================================ */
+
+.img-tilt-right {
+  clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
+}
+
+.img-tilt-left {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 72%);
+}
+
+.img-tilt-both {
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES
+   ============================================ */
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
