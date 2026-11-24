@@ -95,3 +95,49 @@ function initCursorTrail() {
 
 document.addEventListener('DOMContentLoaded', initCursorTrail);
 </script>
+
+<!-- SCROLL REVEAL SCRIPT
+     Watches text on the page and, as each piece scrolls into view,
+     adds the "in-view" class so the CSS in global.css can animate it.
+     Without JavaScript, nothing is hidden and the text shows normally. -->
+<script is:inline>
+  (function () {
+    // Make sure this only runs once per page, even if the file loads twice
+    if (window.__teaseReveal) return;
+    window.__teaseReveal = true;
+
+    // Very old browsers: skip the animation and show everything normally
+    if (!('IntersectionObserver' in window)) return;
+
+    function setup() {
+      // Which text gets the animation: headings, paragraphs, list items and
+      // quotes inside <main>. The navbar and footer are left alone.
+      var els = document.querySelectorAll('main h1, main h2, main h3, main h4, main p, main li, main blockquote');
+
+      // The "watcher": fires when an item is at least 15% visible
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('in-view'); // triggers the animation
+            io.unobserve(e.target);            // animate once only, not every time you scroll back
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -5% 0px' });
+
+      els.forEach(function (el) {
+        if (el.classList.contains('reveal')) return; // already set up
+
+        // Items next to each other appear 60ms apart (up to 5), for a gentle stagger
+        var i = Array.prototype.indexOf.call(el.parentNode.children, el);
+        el.style.setProperty('--reveal-delay', Math.min(i, 5) * 60 + 'ms');
+
+        el.classList.add('reveal'); // hides it until it scrolls into view
+        io.observe(el);
+      });
+    }
+
+    // Run on first page load, and again after each page change
+    document.addEventListener('DOMContentLoaded', setup);
+    document.addEventListener('astro:page-load', setup);
+  })();
+</script>

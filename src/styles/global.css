@@ -368,6 +368,36 @@ nav a:hover {
   }
 }
 
+/* ==========================================================
+   SCROLL REVEAL: text fades in and rises slightly as it
+   scrolls into view. The script in BaseHead.astro adds the
+   "reveal" class to text, then "in-view" when it is visible.
+   ========================================================== */
+
+/* Starting state: invisible and nudged down a little */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px); /* how far the text rises: bigger = more movement */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* 0.8s = how long it takes */
+  transition-delay: var(--reveal-delay, 0ms); /* set per item by the script, so items appear one after another */
+}
+
+/* Final state: fully visible and in its normal position */
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Accessibility: if a visitor has "reduce motion" turned on in their
+   device settings, skip the animation and show the text right away */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* ============================================
    SPACING
    ============================================ */
