@@ -103,6 +103,7 @@ import HeaderLink from './HeaderLink.astro';
   }
   nav :global(a) {
     transition: opacity 0.2s ease;
+    white-space: nowrap;
   }
   nav :global(a:hover) {
     opacity: 0.7;
@@ -136,10 +137,12 @@ import HeaderLink from './HeaderLink.astro';
     padding: 14px;
     margin-right: -14px;
     z-index: 100;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
   .bar {
     display: block;
-    width: 30px;
+    width: 26px;
     height: 3px;
     background: var(--color-parchment);
     border-radius: 2px;
@@ -160,7 +163,7 @@ import HeaderLink from './HeaderLink.astro';
   }
 
   /* Mobile */
-  @media (max-width: 720px) {
+  @media (max-width: 900px) {
     .hamburger {
       display: flex;
     }
@@ -169,18 +172,34 @@ import HeaderLink from './HeaderLink.astro';
       position: fixed;
       top: 0;
       right: 0;
-      height: 100vh;
+      height: 100vh; /* fallback */
+      height: 100dvh; /* the visible height on phones, so nothing hides behind the browser bar */
       width: 80%;
       max-width: 320px;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-      gap: 2rem;
+      gap: 1.25rem;
+      box-sizing: border-box;
+      padding: 5rem 0 2rem;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      visibility: hidden;
       background: var(--color-inkwell);
       box-shadow: -4px 0 20px rgba(0, 0, 0, 0.4);
       transform: translateX(100%);
-      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.35s;
       z-index: 99;
+    }
+    /* centers the links when there is room, and scrolls when there is not */
+    .menu > :first-child {
+      margin-top: auto;
+    }
+    .menu > :last-child {
+      margin-bottom: auto;
+    }
+    :global(html.menu-open) {
+      overflow: hidden;
     }
 
     /* Mobile menu: dark background, white text, large tap targets, gold hover */
@@ -191,8 +210,8 @@ import HeaderLink from './HeaderLink.astro';
       display: block;
       width: 100%;
       text-align: center;
-      font-size: 1.35rem;
-      padding: 0.9em 1.5em;
+      font-size: 1.2rem;
+      padding: 0.7em 1.5em;
     }
     nav :global(.menu a:hover),
     nav :global(.menu a:active),
@@ -210,6 +229,8 @@ import HeaderLink from './HeaderLink.astro';
 
     .menu.open {
       transform: translateX(0);
+      visibility: visible;
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s;
     }
 
     .internal-links {
@@ -226,26 +247,40 @@ import HeaderLink from './HeaderLink.astro';
 </style>
 
 <script is:inline>
-function initHamburger() {
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.getElementById("menu");
+  // One click listener for the whole page, added once. It keeps working after Astro swaps pages,
+  // and it can never be added twice (which made the hamburger open and close in the same tap).
+  (function () {
+    if (window.__teaseNavBound) return;
+    window.__teaseNavBound = true;
 
-  if (!hamburger || !menu) return;
+    function setOpen(open) {
+      var hamburger = document.getElementById("hamburger");
+      var menu = document.getElementById("menu");
+      if (!hamburger || !menu) return;
+      hamburger.setAttribute("aria-expanded", String(open));
+      menu.classList.toggle("open", open);
+      document.documentElement.classList.toggle("menu-open", open);
+    }
 
-  hamburger.addEventListener("click", () => {
-    const isOpen = hamburger.getAttribute("aria-expanded") === "true";
-    hamburger.setAttribute("aria-expanded", String(!isOpen));
-    menu.classList.toggle("open");
-  });
+    document.addEventListener("click", function (e) {
+      var t = e.target;
+      if (!(t instanceof Element)) return;
+      var hamburger = document.getElementById("hamburger");
+      var menu = document.getElementById("menu");
+      if (!hamburger || !menu) return;
 
-  menu.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      hamburger.setAttribute("aria-expanded", "false");
-      menu.classList.remove("open");
+      if (t.closest("#hamburger")) {
+        setOpen(hamburger.getAttribute("aria-expanded") !== "true");
+      } else if (t.closest("#menu a") || (menu.classList.contains("open") && !t.closest("#menu"))) {
+        setOpen(false);
+      }
     });
-  });
-}
 
-document.addEventListener('DOMContentLoaded', initHamburger);
-document.addEventListener('astro:page-load', initHamburger);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setOpen(false);
+    });
+    document.addEventListener("astro:after-swap", function () {
+      document.documentElement.classList.remove("menu-open");
+    });
+  })();
 </script>
